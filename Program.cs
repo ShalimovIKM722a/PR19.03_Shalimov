@@ -1,4 +1,5 @@
 ﻿//Задачі на арифметичні та логічні оператори
+
 void Task1_operator() {
 //    Напишіть програму, яка перевіряє пароль користувача на відповідність
 //    вимогам безпеки(наприклад, мінімальна довжина, наявність цифр та
@@ -37,6 +38,7 @@ while (true)
             if (number % i == 0)
             {
                 Console.WriteLine("Number is not prime");
+                break;
             }
             else
             {
@@ -98,6 +100,33 @@ void Task4_operator()
     }
 }
 
+void Task5_operator()
+{
+
+
+    //    Напишіть програму для конвертації температури з градусів Цельсія в
+    //градуси Фаренгейта або навпаки.Використовуйте арифметичні операції для
+    //конвертації.
+
+    uint number;
+    Console.WriteLine("Хочете перевести з градусів Цельсія в градуси Фаренгейта - 1, навпакм - 0");
+    number = uint.Parse(Console.ReadLine());
+
+    if (number == 0)
+    {
+        int gradus;
+        Console.WriteLine("Введыть градуси Цельсія");
+        gradus = int.Parse(Console.ReadLine());
+        Console.WriteLine("Це буде " + ((gradus * 9) / 5 + 32) + " градусів Фаренгейту");
+    }
+    else
+    {
+        int gradus;
+        Console.WriteLine("Введыть градуси Фаренгейту");
+        gradus = int.Parse(Console.ReadLine());
+        Console.WriteLine("Це буде " + ((gradus -32) * 5/9) + " градусів цельсыя");
+    }
+}
 
 //Задачі на одновимірні та двовимірні масиви
 
@@ -164,4 +193,49 @@ void Task3_arrays()
         Console.WriteLine("The amount will not work");
     }
 
+}
+
+void Task4_arrays()
+{
+    //   Напишіть програму, яка перевіряє, чи міститься певний елемент у
+    //масиві.
+    int[] a = { 5, 4, 8, 9, 7, 5, 7, 4, 9 };
+    int number;
+    Console.WriteLine("Enter number");
+    number = int.Parse(Console.ReadLine());
+    bool check = false;
+
+    for (int i = 0; i < a.Length; i++)
+    {
+        if (a[i] == number)
+        {
+            Console.WriteLine($"It exists on an {i} element");
+            check = true;
+        }
+        
+    }
+    if( !check )
+    {
+        Console.WriteLine($"Element not in array");
+    }
+}
+
+void Task5_arrays()
+{
+    int[,] array = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+    int low, high;
+    Console.WriteLine("Enter low border");
+    low = int.Parse(Console.ReadLine());
+    Console.WriteLine("Enter hight border");
+    high = int.Parse(Console.ReadLine());
+    for(int i = 0;i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i,j] >= low && array[i,j] <= high)
+            { 
+                Console.WriteLine($"Елемент з адрсою [{i}] [{j}] рідлягає заданому інтервалу");
+            }
+        }
+    }
 }
