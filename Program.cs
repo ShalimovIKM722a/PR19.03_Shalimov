@@ -15,21 +15,19 @@
 //else
 //{
 //    Console.WriteLine("Minimum 8 symbols");
-//}
-
-
+//}  task1
 
 
 
 //Напишіть програму, яка перевіряє, чи є введене користувачем число
-//простим. Використовуйте арифметичні операції для перевірки дільників
+//простим.Використовуйте арифметичні операції для перевірки дільників
 //числа.
 
 
 //while (true)
 //{
 //    uint number;
-//    bool prime=false;
+//    bool prime = false;
 //    Console.WriteLine("Enter number!");
 //    number = uint.Parse(Console.ReadLine());
 //    for (int i = 2; i < number; i++)
@@ -43,8 +41,33 @@
 //            prime = true;
 //        }
 //    }
-//    if( prime )
+//    if (prime)
 //    {
 //        Console.WriteLine("Number is prime");
 //    }
 //}
+
+    //Напишіть програму, яка перевіряє, чи належить введене користувачем
+ //число заданому інтервалу. Використовуйте логічні оператори для перевірки
+ //умови належності числа до інтервалу.
+
+
+    //int number;
+    //Console.WriteLine("Enter number");
+    //number = int.Parse(Console.ReadLine());
+    //int low, high;
+    //Console.WriteLine("Enter low border");
+    //low = int.Parse(Console.ReadLine());
+    //Console.WriteLine("Enter hight border");
+    //high = int.Parse(Console.ReadLine());
+    //if(number >= low && number <= high)
+    //{
+    //    Console.WriteLine("Number is in interval");
+    //}
+    //else
+    //{
+    //    Console.WriteLine("Number is not in interval");
+    //}
+
+
+
