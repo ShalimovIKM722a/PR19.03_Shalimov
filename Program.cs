@@ -136,3 +136,32 @@ void Task2_arrays()
     Console.WriteLine($"Cереднэ значення елементів масиву{sum}");
 
 }
+
+void Task3_arrays()
+{
+    //    Напишіть програму, яка шукає всі пари елементів у масиві, сума яких
+    //дорівнює заданому числу.
+
+    int[] a = { 5, 4, 8, 9, 7, 5, 7, 4, 9 };
+    int sum ;
+    Console.WriteLine("Enter number");
+    sum = int.Parse( Console.ReadLine() );
+    bool check=false;
+
+    for (int i = 0; i < a.Length; i++)
+    {
+        for (int j = 0; j < a.Length; j++)
+        {
+            if (a[i] + a[j] == sum)
+            {
+                Console.WriteLine($"This amount will be obtained if you add{i} and {j} елементи масиву");
+                check = true;
+            }
+        }
+    }
+    if (!check)
+    {
+        Console.WriteLine("The amount will not work");
+    }
+
+}
